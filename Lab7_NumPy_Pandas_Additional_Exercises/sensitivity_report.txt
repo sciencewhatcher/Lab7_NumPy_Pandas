@@ -1,0 +1,24 @@
+SECOM STATISTICAL ROBUSTNESS AND SENSITIVITY REPORT
+Student: Gualberto
+Student ID: TUPM-26-1130
+Random Seed: 261130
+Selected Features: Feature_003, Feature_125, Feature_542, Feature_445, Feature_029
+Bootstrap Repetitions: 200
+Largest Change in Mean Difference: Feature_003 (1.0916)
+Features with Changed Difference Sign: None
+Features with Changed Ranking: None
+Features with Changed CI Conclusion: Feature_445
+Reproducibility Verified: True
+
+Per-Feature Results (Fail minus Pass):
+- Feature_003: available-case -43.5089 [-107.9003, 16.8768] | median-imputed -42.4172 [-107.4862, 26.0669]
+- Feature_125: available-case -0.0943 [-0.1426, -0.0523] | median-imputed -0.0940 [-0.1383, -0.0489]
+- Feature_542: available-case -0.0006 [-0.0010, -0.0001] | median-imputed -0.0006 [-0.0010, -0.0000]
+- Feature_445: available-case 0.0214 [0.0001, 0.0506] | median-imputed 0.0214 [-0.0078, 0.0455]
+- Feature_029: available-case 0.0283 [-0.0545, 0.1076] | median-imputed 0.0282 [-0.0446, 0.1071]
+
+Interpretation Notes:
+- Both strategies describe the data; differences between them show sensitivity to missing-value handling.
+- Median imputation shrinks variability, so its intervals tend to be narrower than available-case intervals.
+- Rankings use raw absolute mean differences, which depend on feature scale.
+- A confidence interval that excludes zero indicates a group difference, not a cause of failure.
